@@ -1,10 +1,30 @@
-# Trike 🚲
+<div align="center">
+
+# TRIKE 🚲
 
 **Training wheels for vibecoding**
 
-A [Claude Code](https://claude.ai/code) plugin that teaches complete beginners how to build with AI from day 1.
+**A [Claude Code](https://claude.ai/code) plugin that teaches complete beginners how to build with AI from day 1.**
 
-No prior coding experience needed. Start building real projects immediately.
+**Learn by building real projects — not fake tutorials.**
+
+<br>
+
+```bash
+npx trike-cli
+```
+
+**No prior coding experience needed. Start building immediately.**
+
+<br>
+
+*"Never accept code you can't explain."*
+
+<br>
+
+[What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Philosophy](#philosophy)
+
+</div>
 
 ---
 
@@ -118,18 +138,6 @@ Once installed, use these commands in Claude Code:
 - [Claude Code](https://claude.ai/code) installed
 - A project idea (or just curiosity - Trike can help you find one)
 - Willingness to ask "why" until you understand
-
-## Examples
-
-**What people build with Trike:**
-- Personal websites and portfolios
-- Simple web apps (workout trackers, habit builders, etc.)
-- Data analysis tools
-- Small games
-- API integrations
-- Chrome extensions
-
-All scoped to realistic v1s that actually ship.
 
 ## Contributing
 
