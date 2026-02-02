@@ -16,10 +16,9 @@ npx trike-cli
 
 **No prior coding experience needed. Start building immediately.**
 
+![GSD Install](assets/installation.png)
 <br>
-
 *"Never accept code you can't explain."*
-
 <br>
 
 [What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Philosophy](#philosophy)
