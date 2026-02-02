@@ -1,0 +1,21 @@
+{
+  "currentStage": "not-started",
+  "orientationStep": null,
+  "currentMilestone": null,
+  "currentStep": null,
+  "currentPhase": null,
+  "completedStages": [],
+  "completedMilestones": [],
+  "completedSteps": [],
+  "lastCommand": null,
+  "lastActive": null,
+  "nextUp": "/trike:start",
+  "projectGoal": null,
+  "projectV1Scope": null,
+  "learningPath": [],
+  "learningStyle": null,
+  "userGoals": null,
+  "reviewMode": false,
+  "previousMilestone": null,
+  "skippedMilestones": []
+}

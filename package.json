@@ -1,0 +1,41 @@
+{
+  "name": "trike-cli",
+  "version": "0.1.0",
+  "description": "Training wheels for Claude Code - Learn to vibecode: build with AI from day 1",
+  "bin": {
+    "trike-cli": "bin/install.js",
+    "trike-reinstall": "bin/reinstall.js"
+  },
+  "files": [
+    "bin",
+    "commands",
+    "trike",
+    "agents",
+    "hooks"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ai",
+    "learning",
+    "tutorial",
+    "education",
+    "coding",
+    "beginner"
+  ],
+  "author": "Alex Levadski <alex@levadski.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alevadski/trike-cli.git"
+  },
+  "homepage": "https://github.com/alevadski/trike-cli",
+  "bugs": {
+    "url": "https://github.com/alevadski/trike-cli/issues"
+  },
+  "engines": {
+    "node": ">=16.7.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
