@@ -14,6 +14,8 @@ npx trike-cli
 
 <br>
 
+![Installation](./assets/installation.png)
+
 [What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Who Is This For?](#who-is-this-for)
 
 </div>
