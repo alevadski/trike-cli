@@ -8,13 +8,12 @@
 A light-weight Claude Code plugin that helps experienced developers new to AI development tools transition to agentic coding through a personalized, hands-on learning path built around their own codebase
 
 <br>
-<br>
 
 ```bash
 npx trike-cli
 ```
 
-<!-- <br> -->
+ <br> 
 
 ![Installation](./assets/installation.png)
 
