@@ -1,10 +1,9 @@
 {
   "name": "trike-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Training wheels for Claude Code - Stop typing. Start vibing. 100x your Claude Code game.",
   "bin": {
-    "trike-cli": "bin/install.js",
-    "trike-reinstall": "bin/reinstall.js"
+    "trike-cli": "bin/install.js"
   },
   "files": [
     "bin",
