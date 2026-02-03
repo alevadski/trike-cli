@@ -31,7 +31,7 @@ Present the command reference with their current position highlighted:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Training wheels for Claude Code
-Learn to vibecode: build with AI from day 1
+Stop typing. Start vibing. 100x your Claude Code game.
 
 ## Your Journey
 

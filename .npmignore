@@ -1,0 +1,45 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Development documentation
+PIVOT-STATUS.md
+COMMAND-FIX-STATUS.md
+
+# System
+.DS_Store
+*.log
+npm-debug.log*
+
+# Config
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build
+dist/
+build/
+.cache/
+
+# Testing
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+coverage/
+
+# Examples
+examples/
+demo/
+
+# Test installations
+.claude/

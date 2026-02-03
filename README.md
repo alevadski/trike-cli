@@ -2,11 +2,9 @@
 
 # TRIKE 🚲
 
-**Training wheels for vibecoding**
+**Stop typing. Start vibing. 100x your Claude Code game.**
 
-**A [Claude Code](https://claude.ai/code) plugin that teaches complete beginners how to build with AI from day 1.**
-
-**Learn by building real projects — not fake tutorials.**
+**A [Claude Code](https://claude.ai/code) plugin that helps experienced developers master advanced features in 2-3 hours.**
 
 <br>
 
@@ -14,14 +12,9 @@
 npx trike-cli
 ```
 
-**No prior coding experience needed. Start building immediately.**
-
-![GSD Install](assets/installation.png)
-<br>
-*"Never accept code you can't explain."*
 <br>
 
-[What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Philosophy](#philosophy)
+[What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Who Is This For?](#who-is-this-for)
 
 </div>
 
@@ -29,11 +22,15 @@ npx trike-cli
 
 ## What is Trike?
 
-Trike is an interactive teaching system that guides you through building your first project with AI. Instead of traditional coding tutorials, you learn by actually building something you want while Claude Code writes the code for you.
+Trike helps experienced developers get way more out of Claude Code. Most people only use basic chat, but there's:
 
-**The core principle:** Never accept code you can't explain.
+- **Slash commands** - context, memory, review, rewind, agents, and more
+- **Context management** - CLAUDE.md, .claudeignore optimization
+- **Skills & MCPs** - extend Claude with specialized knowledge and tool integrations
+- **Hooks** - automate your workflow
+- **Advanced features** - extended thinking, subagents, checkpointing
 
-You're not learning syntax and language features. You're learning how to architect, verify, and understand what gets built.
+Trike creates a personalized learning path based on your existing knowledge, so you only learn what you're missing. In 2-3 hours, you'll have a fully optimized project setup and 100x the productivity.
 
 ## Installation
 
@@ -41,7 +38,7 @@ You're not learning syntax and language features. You're learning how to archite
 npx trike-cli
 ```
 
-That's it. Trike installs itself as a Claude Code plugin.
+That's it. Trike installs itself as a Claude Code plugin and you're ready to go.
 
 ## Quick Start
 
@@ -51,124 +48,120 @@ Open Claude Code in any directory and run:
 /trike:start
 ```
 
-Follow the interactive orientation, then plan and build your first project.
+Take an 8-question assessment to identify what you already know, then Trike will create a personalized learning path for your specific needs and project.
 
 ## How It Works
 
-### 1. Orientation (5 steps)
-Learn the basics: how to use Claude Code, what to expect, and how the learning process works.
+**1. Assessment** - Answer 8 questions about your Claude Code knowledge (2 min)
 
-### 2. Planning
-Describe what you want to build. Trike helps you scope it down to a realistic v1 and creates a personalized learning path.
+**2. Project Analysis** - Trike analyzes your actual project's tech stack and structure (1 min)
 
-### 3. Building
-Work through milestones, one step at a time:
-- **Discuss** - Understand what you're building and why
-- **Plan** - See the implementation approach
-- **Execute** - Watch Claude Code build it (with explanations)
-- **Explain** - Learn how the pieces connect
-- **Verify** - Prove you understand before moving on
+**3. Personalized Path** - Get a custom learning curriculum focused on what YOU need (instant)
 
-Each milestone teaches you just-in-time concepts you need for that specific step.
+**4. Learn by Doing** - Work through milestones, each teaching a Claude Code feature in the context of YOUR project (2-3 hours)
 
-### 4. Your First Working Project
-By the end, you have a real project you built (well, Claude built it, but you understand it) and the knowledge to add features yourself.
-
-## What You'll Learn
-
-- **Vibecoding:** How to build with AI as your co-pilot
-- **Architecture Understanding:** Why components exist and how they connect
-- **Verification Skills:** How to test and ensure code works
-- **Real-World Development:** Git, project structure, debugging
-
-**What you won't learn:**
-- Traditional programming syntax (unless necessary)
-- Computer science theory
-- Algorithms and data structures
-- Anything not needed for your actual project
-
-## Philosophy
-
-Like training wheels on a bike, Trike:
-- **Enables** what you couldn't do alone
-- **Teaches** you gradually through real building
-- **Comes off** when you're ready to ride solo
-
-Traditional coding education starts with syntax, variables, loops, and functions. You spend weeks in tutorial hell before building anything real.
-
-Trike flips this: build first, learn as you go, understand what matters.
+**5. Fully Optimized** - Leave with:
+- CLAUDE.md configured for your tech stack
+- .claudeignore optimized
+- Recommended skills installed
+- Recommended MCPs configured
+- Complete understanding of all Claude Code features
 
 ## Commands
 
-Once installed, use these commands in Claude Code:
+Once installed, you have access to these commands in Claude Code:
 
-### Core Commands
-- `/trike:start` - Begin your journey
-- `/trike:next` - Continue to next step
-- `/trike:plan` - Plan your project
-- `/trike:build` - Start building
+- `/trike:start` - Begin your learning journey
+- `/trike:quiz` - Take the knowledge assessment
+- `/trike:begin` - Analyze your project and create curriculum
+- `/trike:next` - Get the next milestone in your learning path
+- `/trike:progress` - Check your current progress
 
-### Help & Navigation
-- `/trike:help` - See all commands
-- `/trike:progress` - Check where you are
-- `/trike:explain [topic]` - Deep dive on any concept
-- `/trike:stuck` - Get help when confused
+**Utility commands** (available after completion):
+- `/trike:setup-check` - Audit any project's Claude Code setup
+- `/trike:prompt-help` - Get help improving your prompts
 
-### Advanced
-- `/trike:skip-to [milestone]` - Jump ahead (if you know what you're doing)
-- `/trike:back` - Go back one step
-- `/trike:retry` - Try current step again
+## What You'll Learn
+
+Depending on your assessment results, your learning path may include:
+
+### Core Features
+- How to use slash commands effectively (`/memory`, `/rewind`, `/review`, `/agents`)
+- Understanding how context works and token management
+- Creating effective CLAUDE.md files for your tech stack
+- Optimizing .claudeignore for your project structure
+
+### Power Features
+- Installing and using Skills (specialized knowledge modules)
+- Setting up MCP servers (tool integrations)
+- Configuring hooks for workflow automation
+
+### Advanced Features
+- When and how to use extended thinking
+- Working with subagents for parallel tasks
+- Checkpointing and session management strategies
+
+**Every topic is taught by applying it to YOUR real project** - no abstract tutorials or toy examples.
 
 ## Who Is This For?
 
-**Perfect for:**
-- Complete beginners who want to build something real
-- People who tried traditional tutorials and got bored
-- Anyone who wants to learn "new way" coding (with AI)
-- Experienced devs teaching beginners
+### Perfect for:
+- ✅ Developers who know how to code but are new to Claude Code
+- ✅ Experienced devs who want to master all CC features
+- ✅ Anyone who feels like they're only scratching the surface
+- ✅ Teams wanting consistent Claude Code setup across projects
 
-**Not ideal for:**
-- People wanting deep computer science knowledge
-- Those who need to pass traditional coding interviews
-- Learners who prefer theory before practice
+### Not ideal for:
+- ❌ Complete beginners to programming (learn basics first)
+- ❌ People who just want quick answers (Trike is a learning journey)
+- ❌ Those not willing to invest 2-3 hours
+
+## Philosophy
+
+**Learn by doing on your real project.**
+
+Instead of abstract tutorials, every milestone teaches a Claude Code feature by having you apply it to YOUR actual project. The learning is immediate, relevant, and practical.
+
+**Personalized, not one-size-fits-all.**
+
+No fixed learning paths. Trike adapts to what you already know and what you're trying to achieve. If you already know slash commands, we'll skip them. If you're struggling with context management, we'll go deep.
+
+**Context-aware explanations.**
+
+When teaching CLAUDE.md, we don't show generic examples. We show you how to document YOUR React monorepo or YOUR Python microservices. Real stack, real patterns.
+
+## Example Learning Path
+
+Here's what a typical experienced developer's path might look like:
+
+```
+Quiz Results: Uses CC regularly, knows basic commands, unclear on context management
+Goal: Ship features faster
+Pain Point: Responses feel generic/unhelpful
+
+Your Personalized Path (10 milestones, ~2.5 hours):
+├─ Milestone 1: How Context Really Works
+├─ Milestone 2: Creating Effective CLAUDE.md
+├─ Milestone 3: Optimizing .claudeignore
+├─ Milestone 4: Memory Management with /memory
+├─ Milestone 5: Code Review Workflow with /review
+├─ Milestone 6: Finding and Installing Skills
+├─ Milestone 7: Setting Up Your First MCP
+├─ Milestone 8: Advanced Context Optimization
+├─ Milestone 9: When to Use Extended Thinking
+└─ Milestone 10: Workflow Automation Patterns
+```
 
 ## Requirements
 
 - [Claude Code](https://claude.ai/code) installed
-- A project idea (or just curiosity - Trike can help you find one)
-- Willingness to ask "why" until you understand
+- A project to work with (or willingness to start one)
+- 2-3 hours of focused time
+- Basic understanding of your tech stack
 
 ## Contributing
 
-Trike is open source and welcomes contributions!
-
-**Ideas:**
-- Additional teaching resources
-- Example projects and learning paths
-- Improved explanations and analogies
-- Bug fixes and improvements
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## FAQ
-
-**Q: Do I need to know how to code?**
-A: Nope. Zero coding experience required.
-
-**Q: Will I actually learn to code?**
-A: You'll learn to build with AI. That's different from traditional coding, but it's what matters in 2026.
-
-**Q: How long does it take?**
-A: Everyone learns at their own pace. Could be days, could be weeks. Trike adapts to you.
-
-**Q: What if I get stuck?**
-A: Use `/trike:stuck` anytime. Trike will help you understand what's confusing and explain it differently.
-
-**Q: Can I build real projects with this?**
-A: Yes! That's the whole point. You build real, working software from day 1.
-
-**Q: Is this just ChatGPT for coding?**
-A: No. Trike is a structured teaching system that ensures you understand what's being built. It's designed for learning, not just generating code.
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
@@ -176,12 +169,10 @@ MIT © [Alex Levadski](https://github.com/alevadski)
 
 ---
 
-**Ready to start?**
+<div align="center">
 
-```bash
-npx trike-cli
-```
+**Built for developers, by developers.**
 
-Then open Claude Code and run `/trike:start`
+[Report Bug](https://github.com/alevadski/trike/issues) · [Request Feature](https://github.com/alevadski/trike/issues)
 
-Built with [Claude Code](https://claude.ai/code) • [Report Bug](https://github.com/alevadski/trike-cli/issues) • [Request Feature](https://github.com/alevadski/trike-cli/issues)
+</div>

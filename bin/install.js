@@ -45,6 +45,27 @@ function getInstallDir() {
   return claudeConfigDir;
 }
 
+// Remove directory recursively
+function removeDir(dir) {
+  if (!fs.existsSync(dir)) {
+    return;
+  }
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      removeDir(fullPath);
+    } else {
+      fs.unlinkSync(fullPath);
+    }
+  }
+
+  fs.rmdirSync(dir);
+}
+
 // Copy directory recursively
 function copyDir(src, dest) {
   if (!fs.existsSync(dest)) {
@@ -75,9 +96,38 @@ function install() {
 
   console.log(`  Installing to ${cyan}${locationLabel}${reset}\n`);
 
+  // Clean up old Trike files before reinstalling
+  console.log(`  ${yellow}Cleaning up old files...${reset}`);
+
+  const commandsDest = path.join(targetDir, 'commands', 'trike');
+  const agentsDest = path.join(targetDir, 'agents');
+  const trikeDest = path.join(targetDir, 'trike');
+
+  // Remove old commands/trike directory
+  if (fs.existsSync(commandsDest)) {
+    removeDir(commandsDest);
+  }
+
+  // Remove old trike-* agents
+  if (fs.existsSync(agentsDest)) {
+    const agents = fs.readdirSync(agentsDest).filter(f => f.startsWith('trike-') && f.endsWith('.md'));
+    for (const agent of agents) {
+      const agentPath = path.join(agentsDest, agent);
+      if (fs.existsSync(agentPath)) {
+        fs.unlinkSync(agentPath);
+      }
+    }
+  }
+
+  // Remove old trike/ directory
+  if (fs.existsSync(trikeDest)) {
+    removeDir(trikeDest);
+  }
+
+  console.log(`  ${green}✓${reset} Cleaned up old files\n`);
+
   // Copy commands
   const commandsSrc = path.join(src, 'commands', 'trike');
-  const commandsDest = path.join(targetDir, 'commands', 'trike');
 
   if (fs.existsSync(commandsSrc)) {
     copyDir(commandsSrc, commandsDest);
@@ -86,7 +136,6 @@ function install() {
 
   // Copy agents
   const agentsSrc = path.join(src, 'agents');
-  const agentsDest = path.join(targetDir, 'agents');
 
   if (fs.existsSync(agentsSrc)) {
     fs.mkdirSync(agentsDest, { recursive: true });
@@ -101,7 +150,6 @@ function install() {
 
   // Copy trike/ directory (references, templates, workflows)
   const trikeSrc = path.join(src, 'trike');
-  const trikeDest = path.join(targetDir, 'trike');
 
   if (fs.existsSync(trikeSrc)) {
     copyDir(trikeSrc, trikeDest);
@@ -117,7 +165,7 @@ function install() {
   console.log(`
   ${green}Done!${reset} Launch Claude Code and run ${cyan}/trike:start${reset}
 
-  Learn to vibecode: build with AI from day 1.
+  Stop typing. Start vibing. 100x your Claude Code game.
 `);
 }
 

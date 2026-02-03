@@ -1,6 +1,6 @@
 ---
-name: trike:start
-description: Begin your Claude Code mastery journey
+name: trike:quiz
+description: Assess your Claude Code knowledge to personalize your learning path
 allowed-tools:
   - AskUserQuestion
   - Write
@@ -8,50 +8,18 @@ allowed-tools:
 ---
 
 <objective>
-Greet user, briefly explain what Trike is, then run the 8-question assessment and store results.
+Collect granular data about the user's Claude Code knowledge, goals, and pain points through an 8-question assessment. If they have experience with other AI coding tools, ask which one to enable feature comparisons later.
 </objective>
 
 <process>
 
-## Step 0: Check Existing Progress
+## Step 1: Brief Intro
 
-Check if `.trike/progress.json` exists.
+Say: "8 quick questions to personalize your learning path."
 
-If found:
-```
-I see you already have progress saved!
+## Step 2: Ask All Questions
 
-Would you like to:
-1. Continue from where you left off
-2. Start fresh (this will reset your progress)
-```
-
-Wait for response using AskUserQuestion:
-- If "Continue" → Exit and tell user to run `/trike:next`
-- If "Start fresh" → Delete `.trike/` directory and proceed with quiz
-
-If not found: Proceed to Step 1.
-
-## Step 1: Greet and Explain
-
-Display:
-```
-Hey! Welcome to Trike 🚲
-
-Trike helps developers get way more out of Claude Code. Most people only use basic chat - but there's slash commands, context management, skills, MCPs, hooks, and more that can 100x your productivity.
-
-The catch? Everyone's starting point is different. A quick quiz helps me figure out what you already know so I can create a learning path that skips the basics and focuses on what you're missing.
-
-8 quick questions, then we'll get you set up on a real project.
-```
-
-## Step 2: Launch Quiz
-
-Say: "Let's begin!"
-
-## Step 3: Ask Questions (Part 1 of 2)
-
-Use the AskUserQuestion tool with first 4 questions:
+Use the AskUserQuestion tool with all 8 questions:
 
 ```json
 {
@@ -70,8 +38,16 @@ Use the AskUserQuestion tool with first 4 questions:
           "description": "You've used Cursor, Copilot, or similar tools"
         },
         {
-          "label": "Used it a few times or use it regularly",
-          "description": "You've chatted with Claude for basic questions"
+          "label": "Used it a few times for basic questions",
+          "description": "You've chatted with Claude but haven't explored features"
+        },
+        {
+          "label": "Use it regularly for conversations",
+          "description": "It's your coding companion but mostly for chat"
+        },
+        {
+          "label": "Know about commands and tried some features",
+          "description": "You've used slash commands or explored a bit"
         },
         {
           "label": "Use it extensively (skills, MCPs, hooks, etc.)",
@@ -97,8 +73,12 @@ Use the AskUserQuestion tool with first 4 questions:
           "description": "You've tried a few common ones"
         },
         {
-          "label": "Advanced commands or created custom ones",
-          "description": "You use commands regularly or built your own"
+          "label": "Advanced commands like /plan, /remember",
+          "description": "You use commands regularly"
+        },
+        {
+          "label": "I've created custom slash commands",
+          "description": "You've built your own commands"
         }
       ]
     },
@@ -120,6 +100,10 @@ Use the AskUserQuestion tool with first 4 questions:
           "description": "You understand the context system"
         },
         {
+          "label": "I don't know how it works",
+          "description": "The mechanism is unclear to you"
+        },
+        {
           "label": "I actively manage context with CLAUDE.md and .claudeignore",
           "description": "You optimize context regularly"
         }
@@ -139,26 +123,19 @@ Use the AskUserQuestion tool with first 4 questions:
           "description": "You're aware but haven't tried"
         },
         {
-          "label": "I've used built-in skills",
+          "label": "I've used 1-2 built-in skills",
           "description": "You've experimented with skills"
         },
         {
-          "label": "I regularly use skills or installed custom ones",
+          "label": "I regularly use skills for different tasks",
           "description": "Skills are part of your workflow"
+        },
+        {
+          "label": "I've installed custom skills or plugins",
+          "description": "You've extended Claude with plugins"
         }
       ]
-    }
-  ]
-}
-```
-
-## Step 4: Ask Questions (Part 2 of 2)
-
-Use the AskUserQuestion tool with remaining 4 questions:
-
-```json
-{
-  "questions": [
+    },
     {
       "question": "Have you heard of MCP (Model Context Protocol) servers?",
       "header": "MCPs",
@@ -177,8 +154,12 @@ Use the AskUserQuestion tool with remaining 4 questions:
           "description": "You understand the concept"
         },
         {
-          "label": "I have MCPs installed and use them",
-          "description": "MCPs are part of your workflow"
+          "label": "I have 1-2 MCPs installed",
+          "description": "You've set up MCPs"
+        },
+        {
+          "label": "I actively use multiple MCPs",
+          "description": "MCPs are essential to your workflow"
         }
       ]
     },
@@ -196,11 +177,15 @@ Use the AskUserQuestion tool with remaining 4 questions:
           "description": "Provide some context manually"
         },
         {
+          "label": "Use /remember or provide context",
+          "description": "You give structured context"
+        },
+        {
           "label": "I have CLAUDE.md files set up",
           "description": "You've created project documentation"
         },
         {
-          "label": "Full setup: CLAUDE.md, .claudeignore, hooks, skills",
+          "label": "Full setup: CLAUDE.md, .claudeignore, hooks, skills configured",
           "description": "Your projects are fully optimized"
         }
       ]
@@ -225,6 +210,10 @@ Use the AskUserQuestion tool with remaining 4 questions:
         {
           "label": "Don't know what features exist",
           "description": "Missing capabilities you don't know about"
+        },
+        {
+          "label": "Hard to get consistent quality",
+          "description": "Results are hit or miss"
         }
       ]
     },
@@ -248,6 +237,10 @@ Use the AskUserQuestion tool with remaining 4 questions:
         {
           "label": "Explore what's possible",
           "description": "Discovery and experimentation"
+        },
+        {
+          "label": "Get unstuck on my workflow",
+          "description": "Improve how you currently use it"
         }
       ]
     }
@@ -255,7 +248,7 @@ Use the AskUserQuestion tool with remaining 4 questions:
 }
 ```
 
-## Step 5: Check for Other Tool Experience
+## Step 3: Check for Other Tool Experience
 
 If Q1 answer is "Never used CC but have experience with other AI coding tools":
 
@@ -263,9 +256,9 @@ Ask (brief): "Which AI coding tool have you used? (e.g., Cursor, GitHub Copilot,
 
 Wait for response. Store their answer as `otherTool`.
 
-## Step 6: Store Quiz Answers
+## Step 4: Store Quiz Answers
 
-Create `.trike/progress.json` with new `milestoneState` field:
+Create `.trike/progress.json`:
 
 ```bash
 mkdir -p .trike
@@ -275,9 +268,6 @@ cat > .trike/progress.json <<'EOF'
 {
   "currentStage": "quiz-complete",
   "quizCompleted": true,
-  "currentMilestone": 1,
-  "milestoneState": "not-started",
-  "milestonesCompleted": [],
   "quizAnswers": {
     "experience": "[Q1_ANSWER]",
     "commands": "[Q2_ANSWER]",
@@ -299,7 +289,7 @@ EOF
 
 **Important:** If they didn't select "other AI coding tools", set `otherTool: null`
 
-## Step 7: Show Brief Results
+## Step 5: Show Brief Results
 
 Display:
 ```
@@ -312,7 +302,7 @@ Focus: [Q7 answer]
 Ready to generate your personalized learning path.
 ```
 
-## Step 8: Navigation Block
+## Step 6: Navigation Block
 
 End with:
 ```
