@@ -1,22 +1,22 @@
 <div align="center">
 
-# TRIKE 🚲
+# TRIKE CLI
 
-**Stop typing. Start vibing. 100x your Claude Code game.**
 
-**A [Claude Code](https://claude.ai/code) plugin that helps experienced developers master advanced features in 2-3 hours.**
+**Your training wheels for [Claude Code](https://claude.ai/code)**
 
+A light-weight Claude Code plugin that helps experienced developers new to AI development tools transition to agentic coding through a personalized, hands-on learning path built around their own codebase
+
+<br>
 <br>
 
 ```bash
 npx trike-cli
 ```
 
-<br>
+<!-- <br> -->
 
 ![Installation](./assets/installation.png)
-
-[What is Trike?](#what-is-trike) · [How It Works](#how-it-works) · [Commands](#commands) · [Who Is This For?](#who-is-this-for)
 
 </div>
 
@@ -24,33 +24,51 @@ npx trike-cli
 
 ## What is Trike?
 
-Trike helps experienced developers get way more out of Claude Code. Most people only use basic chat, but there's:
+Claude Code's ecosystem has grown fast - slash commands, context management, skills, MCPs, hooks, subagents, and more. For experienced developers who haven't made the jump yet - whether it's lack of time, too much noise around AI coding, or a bad past experience with other tools - committing to learn all of it in isolation is a big ask.
 
-- **Slash commands** - context, memory, review, rewind, agents, and more
-- **Context management** - CLAUDE.md, .claudeignore optimization
-- **Skills & MCPs** - extend Claude with specialized knowledge and tool integrations
-- **Hooks** - automate your workflow
-- **Advanced features** - extended thinking, subagents, checkpointing
+Trike takes a different approach. Instead of sandboxes or sample projects, it teaches you Claude Code inside your own codebase:
 
-Trike creates a personalized learning path based on your existing knowledge, so you only learn what you're missing. In 2-3 hours, you'll have a fully optimized project setup and 100x the productivity.
+- **Personalized plan** — Trike assesses your experience level, analyzes your project, and builds a learning path matched to your goals and tech stack
+- **Learn by doing** — Guided milestones walk you through each tool and give you concrete tasks to apply it right in your codebase
+- **Ship hands-free** — As a final challenge, you build a real feature in your project without writing a single line of code yourself
+- **Always there** — After you're done learning, Trike stays in your setup as a quiet utility you can call on whenever you need it
 
-## Installation
+## Getting Started
+
+### 1. Install Claude Code (if you haven't already)
+
+```bash
+# macOS / Linux
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Windows (PowerShell)
+irm https://claude.ai/install.ps1 | iex
+```
+
+Verify it's working:
+```bash
+claude --version
+```
+
+> Need help? See the [official setup guide](https://code.claude.com/docs/en/setup).
+
+### 2. Install Trike
 
 ```bash
 npx trike-cli
 ```
 
-That's it. Trike installs itself as a Claude Code plugin and you're ready to go.
+Trike installs itself as a Claude Code plugin — no extra config needed.
 
-## Quick Start
+### 3. Start learning
 
-Open Claude Code in any directory and run:
+![First run](./assets/first_run.png)
+
+Open Claude Code in any project directory and run:
 
 ```bash
 /trike:start
 ```
-
-Take an 8-question assessment to identify what you already know, then Trike will create a personalized learning path for your specific needs and project.
 
 ## How It Works
 
@@ -88,7 +106,7 @@ Once installed, you have access to these commands in Claude Code:
 Depending on your assessment results, your learning path may include:
 
 ### Core Features
-- How to use slash commands effectively (`/memory`, `/rewind`, `/review`, `/agents`)
+- How to use slash commands effectively (`/memory`, `/rewind`, `/review`, `/agents`, etc)
 - Understanding how context works and token management
 - Creating effective CLAUDE.md files for your tech stack
 - Optimizing .claudeignore for your project structure
@@ -104,62 +122,6 @@ Depending on your assessment results, your learning path may include:
 - Checkpointing and session management strategies
 
 **Every topic is taught by applying it to YOUR real project** - no abstract tutorials or toy examples.
-
-## Who Is This For?
-
-### Perfect for:
-- ✅ Developers who know how to code but are new to Claude Code
-- ✅ Experienced devs who want to master all CC features
-- ✅ Anyone who feels like they're only scratching the surface
-- ✅ Teams wanting consistent Claude Code setup across projects
-
-### Not ideal for:
-- ❌ Complete beginners to programming (learn basics first)
-- ❌ People who just want quick answers (Trike is a learning journey)
-- ❌ Those not willing to invest 2-3 hours
-
-## Philosophy
-
-**Learn by doing on your real project.**
-
-Instead of abstract tutorials, every milestone teaches a Claude Code feature by having you apply it to YOUR actual project. The learning is immediate, relevant, and practical.
-
-**Personalized, not one-size-fits-all.**
-
-No fixed learning paths. Trike adapts to what you already know and what you're trying to achieve. If you already know slash commands, we'll skip them. If you're struggling with context management, we'll go deep.
-
-**Context-aware explanations.**
-
-When teaching CLAUDE.md, we don't show generic examples. We show you how to document YOUR React monorepo or YOUR Python microservices. Real stack, real patterns.
-
-## Example Learning Path
-
-Here's what a typical experienced developer's path might look like:
-
-```
-Quiz Results: Uses CC regularly, knows basic commands, unclear on context management
-Goal: Ship features faster
-Pain Point: Responses feel generic/unhelpful
-
-Your Personalized Path (10 milestones, ~2.5 hours):
-├─ Milestone 1: How Context Really Works
-├─ Milestone 2: Creating Effective CLAUDE.md
-├─ Milestone 3: Optimizing .claudeignore
-├─ Milestone 4: Memory Management with /memory
-├─ Milestone 5: Code Review Workflow with /review
-├─ Milestone 6: Finding and Installing Skills
-├─ Milestone 7: Setting Up Your First MCP
-├─ Milestone 8: Advanced Context Optimization
-├─ Milestone 9: When to Use Extended Thinking
-└─ Milestone 10: Workflow Automation Patterns
-```
-
-## Requirements
-
-- [Claude Code](https://claude.ai/code) installed
-- A project to work with (or willingness to start one)
-- 2-3 hours of focused time
-- Basic understanding of your tech stack
 
 ## Contributing
 
